@@ -1,0 +1,16 @@
+
+--Crea la variable global fptr que es un puntero de tipo FILE
+--Crea una variable en stack <err> tipo <errno_t>, asigna el archivo Procesos.txt en modo <w>
+--Comprueba si ha ocurrido un error en <err>
+--Guardando en stack una variable integer y dos punteros integer. (numero_1, array_1, array_2)
+--Se carga en el stack el valor 4 y este se asigna a la varibale numero_1
+--Se reserva espacio en el heap usando malloc, del tamaño de 2 numeros enteros (array_1)
+--Se carga el valor de numero_1 en el heap  (array + 0)
+--Se carga el valor 5 en el heap (array_1 + 1)
+--Se reserva espacio en el heap usando calloc, del tamaño de 2 numeros enteros (array_2)
+--Se carga el valor 6 en el heap  (array + 0)
+--Se carga el valor 7 en el heap  (array + 1)
+--Se redimenciona el espacio reservado para array_1, ahora abarca 4 enteros
+--copiamos valores en (array_2 + 0) y (array_2 + 1) en posiciones (array_1 + 2) y (array_1 + 3)
+--Liberamos espacio reservado en heap (array_2)
+--Liberamos espacio reservado en heap (array_1)

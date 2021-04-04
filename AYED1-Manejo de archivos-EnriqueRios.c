@@ -11,7 +11,7 @@
 	Todos los pasos son guardados en un archivo: proceso.txt
 */
 
-FILE* fptr; //
+FILE* fptr; 
 
 void main() {
 	
@@ -21,8 +21,10 @@ void main() {
 	{
 		printf("Algun error molesto.\n");
 	}
+
+
 	fprintf_s(fptr, "\n--Crea la variable global fptr que es un puntero de tipo FILE");
-	fprintf_s(fptr, "\n--Crea una variable en stack <err> tipo <errno_t>, asigna el archivo Provesos.txt en modo <w>");
+	fprintf_s(fptr, "\n--Crea una variable en stack <err> tipo <errno_t>, asigna el archivo Procesos.txt en modo <w>");
 	fprintf_s(fptr, "\n--Comprueba si ha ocurrido un error en <err>");
 
 
@@ -32,7 +34,7 @@ void main() {
 	fprintf_s(fptr, "\n--Se carga en el stack el valor 4 y este se asigna a la varibale numero_1");
 	numero_1 = 4; 
 
-	fprintf_s(fptr, "\n--Se reserva espacio en el heap, del tamaño de 2 numeros enteros (array_1)");
+	fprintf_s(fptr, "\n--Se reserva espacio en el heap usando malloc, del tamaño de 2 numeros enteros (array_1)");
 	array_1 = (int*)malloc(2 * sizeof(int));
 
 	fprintf_s(fptr, "\n--Se carga el valor de numero_1 en el heap  (array + 0)");
@@ -41,7 +43,7 @@ void main() {
 	fprintf_s(fptr, "\n--Se carga el valor 5 en el heap (array_1 + 1)");
 	array_1[1] = 5; 
 
-	fprintf_s(fptr, "\n--Se reserva espacio en el heap, del tamaño de 2 numeros enteros (array_2)");
+	fprintf_s(fptr, "\n--Se reserva espacio en el heap usando calloc, del tamaño de 2 numeros enteros (array_2)");
 	array_2 = (int*)calloc(2, sizeof(int));
 	fprintf_s(fptr, "\n--Se carga el valor 6 en el heap  (array + 0)");
 	array_2[0] = 6;
